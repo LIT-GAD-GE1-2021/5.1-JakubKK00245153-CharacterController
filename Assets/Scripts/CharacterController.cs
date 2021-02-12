@@ -187,7 +187,7 @@ public class CharacterController : MonoBehaviour
         theAnimator.SetBool("Ground", grounded);
         
         // The Animator has a vspeed parameter which should be set to the vertical (y) velocity of
-        // the character. This is used by the Animator in a blend tree to blend various 'falling'
+        // the character. This is used by the Anumator in a blend tree to blend various 'falling'
         // animations depending on the velocity the character is falling at.
 
         // First the the y velocity of the character
@@ -223,7 +223,7 @@ public class CharacterController : MonoBehaviour
             // Let's assume there is no platfrom over head
             platformOverHead = false;
 
-            // We are only going to force the character into a duck if they are on the ground
+            // We are only going to force to character into a duck if they are on the ground
             if (grounded)
             {
                 // See if there are any Collider2D object on the whatIsGround layer within the headRadius
@@ -240,7 +240,7 @@ public class CharacterController : MonoBehaviour
         if (doDash == true && dashing == false && dashEnabled)
         {
             /* Okay, the player has pressed the dash button and the character is currently not in a dash. What
-             * I am going to do is multiply the characters normal x velocity by dashMultiplier so that it's
+             * I am going to do is by multiplying the characters normal x velocity by dashMultiplier so that it's
              * velocity is increased. This multiplication is actually done in FixedUpdate. I need to be careful only
              * to do the multiplication (i.e. increase the characters velocity) for the duration of the dash which 
              * is stored in the variable dashDuration. So I am going to use a coroutine to set a variable
@@ -273,7 +273,7 @@ public class CharacterController : MonoBehaviour
     }
 
     /*
-     * The FixedUpdate get called at fixed intervals by Unity and this is the function you use to apply
+     * The FixedUpdate get called at fixed intervals by Unity at this is the function you use to apply
      * forces to your game objects as this function is used by Unity to keep the Physics system up-to-date.
      * You should try to keep the code within this function to a bare minimum as we don't want to slow down
      * the physics system.
